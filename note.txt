@@ -1,0 +1,4 @@
+THE MOST IMPORTANT THINGS I HAVE LEARNED HERE IS:
+
+1. NAV BAR (This is the ultimate guide of the navbar here.) Flex basis is a very important
+   property here which determines the space a particular item should take.

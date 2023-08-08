@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My portfolio/About</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav>
+      <ul>
+        <li>
+          <h1>
+            <i class="fa-solid fa-code sohel-logo"></i
+            ><a href="index.html">Sohel Rana</a>
+          </h1>
+        </li>
+        <!-- index.html#projects will redirect the page to the Projects section of the homepage -->
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <!-- sr-only is a built in class. It means only screen reader can read that and aria-hidden 
+            true will set the LinkedIn to hide and allow only screen reader to read it-->
+          <a href=""
+            ><i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span>
+          </a>
+        </li>
+        <!-- using sr-only increases accesibility..... -->
+        <li>
+          <a href=""
+            ><i class="fa-brands fa-square-github" aria-hidden="true"></i>
+            <span class="sr-only">Github</span>
+          </a>
+        </li>
+        <li><a href="" class="button">Resume</a></li>
+      </ul>
+    </nav>
+
+    <!-- Intro section -->
+    <section id="intro">
+      <p class="name">Hi, my name is <span>Sohel Rana</span></p>
+      <h2>I design and develop the web.</h2>
+      <p>
+        I'm a developer and a designer specializing in HTML, CSS, React, UI and
+        UX.
+      </p>
+      <p>Currently, I'm working on <a href="">Let'sfeedIndia</a></p>
+    </section>
+
+    <!-- GRADIENT DIV -->
+    <div class="gradient"></div>
+
+    <div>About here</div>
+
+    <script
+      src="https://kit.fontawesome.com/87e20c001a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

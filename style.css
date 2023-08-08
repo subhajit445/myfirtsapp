@@ -1,0 +1,315 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #fb8686;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+/* box-sizing: border-box; in border-box sizing is measred from end-to-end border. */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+/* p {
+  margin: 0;
+} */
+/* By default every block level element has a margin of 1m, here
+   m is a relative number. It's size is equal to the size of the
+   element. */
+
+nav h1 a {
+  font-family: var(--sans);
+}
+
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+/* wrap property is to follow the right spacing */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2rem;
+}
+
+/* display: block will help the link to expand and take much better space */
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: var(--magenta);
+}
+
+/* flex-basis is how much space that element should take */
+/* flex-basis set to 100% means it will take total space of that horizontal line */
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--aqua);
+}
+
+nav .sohel-logo {
+  font-size: 80%;
+}
+
+nav h1:hover {
+  color: var(--magenta);
+}
+
+/* The reason for giving the h1 flex property is for the logo and the name to go side by side */
+nav h1 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.button {
+  background-color: var(--magenta);
+  padding: 4px 8px;
+  color: var(--black);
+  font-weight: 700;
+}
+.button:hover {
+  background-color: var(--hotmag);
+  color: var(--white);
+}
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+/* -------------***------------ */
+a {
+  color: var(--magenta);
+}
+
+a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--hotmag);
+  text-decoration: none;
+}
+
+/* styling for the intro section */
+#intro {
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  /* border: 1px solid green; */
+  margin: 0 auto;
+}
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#intto .name {
+  font-family: var(--mono);
+}
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--aqua);
+  display: block;
+}
+
+/* project section */
+
+.section-plum {
+  background-color: var(--plum);
+}
+.section-blue {
+  background-color: var(--dkblue);
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 23, 228, 1) 0%,
+    rgba(134, 251, 251, 1) 100%
+  );
+  height: 2px;
+}
+
+#projects {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+  color: var(--aqua);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+.blackbox {
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--black);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+#projects img {
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  border-left: 1px solid var(--aqua);
+  border-top: 1px solid var(--aqua);
+  border-radius: 25px;
+}
+img {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  #projects img {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  .text {
+    grid-column: 5/11;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+  }
+  #projects ul {
+    justify-content: flex-end;
+  }
+  #projects .reverse .text {
+    grid-column: 1/7;
+    order: 2;
+    text-align: left;
+  }
+  #projects .reverse img {
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
+  #projects .reverse ul {
+    justify-content: flex-start;
+  }
+}
+
+/* project section ends */
+
+#contact {
+  background-color: var(--black);
+  padding: 4rem 0;
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+/* margin auto does center things..... */
+#contact-fullscreen {
+  background-color: var(--black);
+  margin: 0 auto;
+}
+#contact button {
+  padding: 16px 24px;
+  background-color: var(--magenta);
+  color: var(--white);
+  margin-top: 1.3rem;
+}
+#contact button:hover {
+  background-color: var(--hotmag);
+}
+
+#contact p {
+  font-size: 1.1rem;
+}
+#contact h2 {
+  font-size: 40px;
+}
+
+/* footer section style */
+footer ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 250%;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 4rem 0;
+  margin: 0;
+  background-color: var(--dkblue);
+}
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 23, 228, 1) 0%,
+    rgba(134, 251, 251, 1) 100%
+  );
+  height: 2px;
+}
